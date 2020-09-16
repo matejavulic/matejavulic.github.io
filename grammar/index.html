@@ -27,7 +27,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRobotoMono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
@@ -341,7 +341,7 @@
                 
                 <h1 id="syntax-and-grammar">Syntax and Grammar</h1>
 <h3 id="syntax">Syntax</h3>
-<p>The following shows the syntax of ITL and designed tree structure of assessment. Symbol + possibility of using one or several instructions/variables.</p>
+<p>The following shows the syntax of ITL and designed tree structure of assessment. Symbol + represents possibility of using one or several instructions/variables.</p>
 <pre><code>Izvestaj+ "Naslov izveštaјa"
 {
     metrike+ Skup_metrika_1
@@ -363,7 +363,7 @@
 }
 </code></pre>
 <h3 id="grammar">Grammar</h3>
-<p>The following shows the grammar of ITL. For interpreting enterd syntax by this definitions, Lark parser is used.</p>
+<p>The following shows the grammar of ITL. For interpreting entered syntax by this definitions, Lark parser is used.</p>
 <pre><code>start: instruction+
 
 instruction: "izvestaj" STRING code_block -&gt; pocetak_izvestaja
