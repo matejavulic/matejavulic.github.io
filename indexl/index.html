@@ -15,7 +15,7 @@
     
     
       
-        <title>Version history - ITL Documentation</title>
+        <title>Indexl - ITL Documentation</title>
       
     
     
@@ -50,11 +50,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#version-history" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -86,7 +81,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Version history
+              Indexl
             
           </span>
         </div>
@@ -148,9 +143,7 @@
         
           
 
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -237,7 +230,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../change/" class="md-tabs__link">
           Changelog
         </a>
       
@@ -381,7 +374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="./" title="Changelog" class="md-nav__link">
+    <a href="../change/" title="Changelog" class="md-nav__link">
       Changelog
     </a>
   </li>
@@ -730,12 +723,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Changelog
@@ -753,20 +744,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Version history" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../change/" title="Version history" class="md-nav__link">
       Version history
     </a>
-    
   </li>
 
         
@@ -782,21 +764,6 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -806,10 +773,57 @@
                   
                 
                 
-                <h1 id="version-history">Version history</h1>
-<p><justify>
-This section of the documentation will be available soon. 
-</justify></p>
+                  <h1>Indexl</h1>
+                
+                <!-- Content -->
+
+<!-- Additional styles for landing page -->
+
+<style>
+
+body{
+background-color: #33075b;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23dd2b00' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23be1200' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23cb022b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b5121c' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d82e34' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23cc3022' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23c40a63' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ca282e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23cb1f64' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23c13f3f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ba1489' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23c54c42' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    }
+
+    /*Hide footer*/
+    .md-footer {
+     display:none;
+    }
+    .md-content__inner {
+     display:none;
+    }
+
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+    }
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+</style>
                 
               
               
@@ -824,27 +838,6 @@ This section of the documentation will be available soon.
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../ide-keyboard/" title="Keyboard shortcuts" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Keyboard shortcuts
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
