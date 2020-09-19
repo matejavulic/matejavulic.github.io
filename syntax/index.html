@@ -15,7 +15,7 @@
     
     
       
-        <title>Block diagram - ITL Documentation</title>
+        <title>Syntax - ITL Documentation</title>
       
     
     
@@ -51,7 +51,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#block-diagram" class="md-skip">
+        <a href="#syntax-and-grammar" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Block diagram
+              Syntax
             
           </span>
         </div>
@@ -185,7 +185,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../purpose/" class="md-tabs__link md-tabs__link--active">
+        <a href="../purpose/" class="md-tabs__link">
           How it works
         </a>
       
@@ -198,7 +198,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../syntax/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           References
         </a>
       
@@ -345,7 +345,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../syntax/" title="References" class="md-nav__link">
+    <a href="./" title="References" class="md-nav__link">
       References
     </a>
   </li>
@@ -446,12 +446,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       How it works
@@ -481,49 +479,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Block diagram
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Block diagram" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../diagram/" title="Block diagram" class="md-nav__link">
       Block diagram
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#internal-organization" class="md-nav__link">
-    Internal Organization
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -536,10 +496,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       References
@@ -557,11 +519,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../syntax/" title="Syntax" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Syntax
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Syntax" class="md-nav__link md-nav__link--active">
       Syntax
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grammar" class="md-nav__link">
+    Grammar
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -828,8 +835,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#internal-organization" class="md-nav__link">
-    Internal Organization
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grammar" class="md-nav__link">
+    Grammar
   </a>
   
 </li>
@@ -850,12 +864,56 @@
                   
                 
                 
-                <h1 id="block-diagram">Block Diagram</h1>
-<h3 id="internal-organization">Internal Organization</h3>
-<p>The following block diagram shows an internal organization of the ITL:</p>
-<p><center>
-<img alt="Rising" src="../img/internals.png" />
-</center></p>
+                <h1 id="syntax-and-grammar">Syntax and Grammar</h1>
+<h3 id="syntax">Syntax</h3>
+<p>The following excerpt shows the syntax of ITL and designed tree structure of assessment. Symbol + represents the possibility of using one or several instructions/variables.</p>
+<pre><code>report+ "Report Tile"
+{
+    metrics+ Metric_set_1
+    {
+        Metric_1+ = (v1,b1,а1)
+        }
+
+    #comment
+    print SMetric_set_1+;
+
+    grade Metric_set_1;
+    draw metric Metric_1+ from Metric_set_1;
+
+    grade comparative Metric_set_1, Metric_set_2;
+
+    grade cumulative Metric_set_1+;
+
+    grade singular Metric_set_1+;
+}
+</code></pre>
+<h3 id="grammar">Grammar</h3>
+<p>The following excerpt shows the grammar of ITL. For interpreting entered syntax by this definition, Lark parser was used.</p>
+<pre><code>start: instruction+
+
+instruction: "report" STRING code_block -&gt; pocetak_izvestaja
+           | "metrics" NAME "{" dict_item* "}" -&gt; skup_metrika
+           | "grade" NAME ";" -&gt; oceni_metrike
+           | "grade cumulative" NAME ("," NAME)* ";" -&gt; oceni_metrike_z
+           | "grade comparative" NAME "," NAME";" -&gt; oceni_metrike_u
+           | "grade singular" NAME ("," NAME)* ";" -&gt; oceni_metrike_p
+           | "print" NAME ("," NAME)* ";" -&gt; ispisi_metrike
+           | "draw metric" NAME ("," NAME)* "from" set -&gt; nacrtaj_metriku
+
+code_block: "{" instruction+ "}" -&gt; blok_naredbi
+dict_item: NAME "=" dict_subitem -&gt; naziv_metrike
+dict_subitem: "(" NUMBER "," NUMBER "," NUMBER ")" -&gt; parametri_metrike
+set: NAME ";" -&gt; from
+COMMENT : /#.*/
+
+%import common.CNAME -&gt; NAME
+%import common.NUMBER -&gt; NUMBER
+%import common.ESCAPED_STRING -&gt; STRING
+%import common.WS
+%ignore WS
+%ignore COMMENT
+</code></pre>
+<p>`</p>
                 
               
               
