@@ -51,7 +51,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#syntax-and-grammar" class="md-skip">
+        <a href="#syntax" class="md-skip">
           Skip to content
         </a>
       
@@ -61,7 +61,7 @@
         <aside class="md-announce">
           <div class="md-announce__inner md-grid md-typeset">
             
-  <p>💡 New feature available! The ITL IDE now supports <a class="announ" href = "/ide-keyboard/">a keyboard shortcuts!</a></p>
+  <p>💡 New feature available! The ITL IDE now supports <a class="announ" href = "/ide-keyboard/">keyboard shortcuts!</a></p>
 
           </div>
         </aside>
@@ -431,8 +431,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial/" title="Tutorial" class="md-nav__link">
-      Tutorial
+    <a href="../tutorial-intro/" title="Beginner tutorial" class="md-nav__link">
+      Beginner tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorial-advanced/" title="Advanced tutorial" class="md-nav__link">
+      Advanced tutorial
     </a>
   </li>
 
@@ -552,15 +564,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
+  <a href="#syntax_1" class="md-nav__link">
     Syntax
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#grammar" class="md-nav__link">
-    Grammar
   </a>
   
 </li>
@@ -835,15 +840,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
+  <a href="#syntax_1" class="md-nav__link">
     Syntax
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#grammar" class="md-nav__link">
-    Grammar
   </a>
   
 </li>
@@ -864,8 +862,8 @@
                   
                 
                 
-                <h1 id="syntax-and-grammar">Syntax and Grammar</h1>
-<h3 id="syntax">Syntax</h3>
+                <h1 id="syntax">Syntax</h1>
+<h3 id="syntax_1">Syntax</h3>
 <p>The following excerpt shows the syntax of ITL and designed tree structure of assessment. Symbol + represents the possibility of using one or several instructions/variables.</p>
 <pre><code>report+ "Report Tile"
 {
@@ -887,33 +885,6 @@
     grade singular Metric_set_1+;
 }
 </code></pre>
-<h3 id="grammar">Grammar</h3>
-<p>The following excerpt shows the grammar of ITL. For interpreting entered syntax by this definition, Lark parser was used.</p>
-<pre><code>start: instruction+
-
-instruction: "report" STRING code_block -&gt; pocetak_izvestaja
-           | "metrics" NAME "{" dict_item* "}" -&gt; skup_metrika
-           | "grade" NAME ";" -&gt; oceni_metrike
-           | "grade cumulative" NAME ("," NAME)* ";" -&gt; oceni_metrike_z
-           | "grade comparative" NAME "," NAME";" -&gt; oceni_metrike_u
-           | "grade singular" NAME ("," NAME)* ";" -&gt; oceni_metrike_p
-           | "print" NAME ("," NAME)* ";" -&gt; ispisi_metrike
-           | "draw metric" NAME ("," NAME)* "from" set -&gt; nacrtaj_metriku
-
-code_block: "{" instruction+ "}" -&gt; blok_naredbi
-dict_item: NAME "=" dict_subitem -&gt; naziv_metrike
-dict_subitem: "(" NUMBER "," NUMBER "," NUMBER ")" -&gt; parametri_metrike
-set: NAME ";" -&gt; from
-COMMENT : /#.*/
-
-%import common.CNAME -&gt; NAME
-%import common.NUMBER -&gt; NUMBER
-%import common.ESCAPED_STRING -&gt; STRING
-%import common.WS
-%ignore WS
-%ignore COMMENT
-</code></pre>
-<p>`</p>
                 
               
               

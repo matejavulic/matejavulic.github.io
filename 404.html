@@ -1,1 +1,202 @@
-We are very sorry, but we couldn't find the page you were loking for.
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F2EEE8;
+  font-family: "Open Sans";
+}
+
+*, *:before, *:after {
+  box-sizing: content-box;
+  transform: translate3d(0, 0, 0);
+}
+
+.face {
+  width: 219px;
+  height: 252px;
+  border: 4px solid #383A41;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+@media screen and (max-width: 400px) {
+  .face {
+    margin-top: 40px;
+    transform: scale(0.8);
+  }
+}
+.face .band {
+  width: 265px;
+  height: 27px;
+  border: 4px solid #383A41;
+  border-radius: 5px;
+  margin-left: -25px;
+  margin-top: 50px;
+}
+.face .band .red {
+  height: calc(100% / 3);
+  width: 100%;
+  background-color: #EB6D6D;
+}
+.face .band .white {
+  height: calc(100% / 3);
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.face .band .blue {
+  height: calc(100% / 3);
+  width: 100%;
+  background-color: #5E7FDC;
+}
+.face .band:before {
+  content: "";
+  display: inline-block;
+  height: 27px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 999;
+}
+.face .band:after {
+  content: "";
+  display: inline-block;
+  height: 27px;
+  width: 30px;
+  background-color: rgba(56, 58, 65, 0.3);
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  margin-top: -27px;
+}
+.face .eyes {
+  width: 128px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.face .eyes:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  border: 7px solid #383A41;
+  margin-right: 20px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  border-bottom: 0;
+}
+.face .eyes:after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  border: 7px solid #383A41;
+  margin-left: 20px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  border-bottom: 0;
+}
+.face .dimples {
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.face .dimples:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 80px;
+  border-radius: 50%;
+  background-color: rgba(235, 109, 109, 0.4);
+}
+.face .dimples:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 80px;
+  border-radius: 50%;
+  background-color: rgba(235, 109, 109, 0.4);
+}
+.face .mouth {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #383A41;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+@media screen and (max-width: 400px) {
+  h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2em;
+  }
+}
+
+.btn {
+    padding: 20px;
+    background-color: #ff9a03ed;
+    color: #33075b;
+    width: 195px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-right: auto;
+    transition: all 0.2s linear;
+    margin-left: auto;
+    margin-top: 0;
+    font-family: "Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+@media screen and (max-width: 400px) {
+  .btn {
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width: 200px;
+  }
+}
+.btn:hover {
+  background-color: #ff9a03;
+  transition: all 0.2s linear;
+}
+
+body{
+background-color: #33075b;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23dd2b00' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23be1200' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23cb022b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b5121c' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d82e34' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23cc3022' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23c40a63' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ca282e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23cb1f64' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23c13f3f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ba1489' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23c54c42' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+	}
+</style>
+
+<script>
+function goHome() {
+	document.location.href="/"
+};
+</script>
+<p><br></p>
+<div class="face">
+	<div class="band">
+		<div class="red"></div>
+		<div class="white"></div>
+		<div class="blue"></div>
+	</div>
+	<div class="eyes"></div>
+	<div class="dimples"></div>
+	<div class="mouth"></div>
+</div>
+
+<h1>Oops! Something went wrong!</h1>
+
+<div class="btn" onclick="goHome()">Back to safety</div>
