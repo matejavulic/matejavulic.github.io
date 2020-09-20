@@ -15,7 +15,7 @@
     
     
       
-        <title>Landing page - ITL Documentation</title>
+        <title>ITL Documentation - ITL Documentation</title>
       
     
     
@@ -75,15 +75,8 @@
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
       
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
-            ITL Documentation
-          </span>
-          <span class="md-header-nav__topic md-ellipsis">
-            
-              Landing page
-            
-          </span>
+        <div class="md-header-nav__ellipsis md-ellipsis">
+          ITL Documentation
         </div>
       
     </div>
@@ -312,8 +305,8 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="." title="Landing page" class="md-nav__link md-nav__link--active">
-      Landing page
+    <a href="." title="ITL Documentation" class="md-nav__link md-nav__link--active">
+      ITL Documentation
     </a>
     
   </li>
@@ -425,6 +418,18 @@
   <li class="md-nav__item">
     <a href="quick/" title="Quick introduction" class="md-nav__link">
       Quick introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="install/" title="Installation" class="md-nav__link">
+      Installation
     </a>
   </li>
 
@@ -796,8 +801,6 @@
                   
                 
                 
-                  <h1>Landing page</h1>
-                
                 <!-- Content -->
 
 <!-- Additional styles for landing page -->
@@ -805,10 +808,8 @@
 <style>
 
 body{
-background-color: #33075b;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23dd2b00' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23be1200' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23cb022b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b5121c' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d82e34' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23cc3022' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23c40a63' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ca282e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23cb1f64' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23c13f3f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ba1489' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23c54c42' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
+background: rgb(0,68,68);
+background: linear-gradient(180deg, rgba(0,68,68,1) 8%, rgba(22,102,39,1) 100%);
     }
 
     /*Hide footer*/
@@ -816,12 +817,13 @@ background-size: cover;
      display:none;
     }
     .md-content__inner {
-     display:none;
+     //display:none;
     }
 
     /* Application header should be static for the landing page */
     .md-header {
       position: initial;
+      background-color: #00444400;
     }
 
     /* Remove spacing, as we cannot hide it completely */
@@ -829,8 +831,8 @@ background-size: cover;
       margin: 0;
     }
 
-    /* Hide main content for now */
-    .md-content {
+    .md-tabs {
+      background-color: #00444400;
     }
 
     /* Hide table of contents */
@@ -846,7 +848,93 @@ background-size: cover;
         display: none;
       }
     }
+
+    @media screen and (min-width: 60em)
+    .tx-hero {
+    max-width: 19rem;
+    margin-top: 3.5rem;
+    padding-bottom: 14vw;
+    }
+
+    .tx-hero {
+    padding-bottom: 6rem;
+        width: 55%;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    }
+   .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: DodgerBlue;
+    }
+
+    .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        }
+
+html, body {
+margin 0;
+padding: 0;
+}
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.md-announce {
+    background-color: hsl(0deg 0% 0% / 16%);
+}
+
+.md-typeset h1 {
+    color: hsl(0deg 0% 100%);
+    font-weight: 900;
+}
+
+.md-typeset .md-button:focus, .md-typeset .md-button:hover {
+    background-color: hsl(180deg 100% 11%); 
+}
+
+.start:hover {
+    background-color: hsl(180deg 100% 11%) !important;
+    color: white !important;
+}
 </style>
+
+<!--<h1>The flex-flow Property</h1>
+
+<p>The flex-flow property is a shorthand property for the flex-direction and the flex-wrap properties.</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+</div>
+
+<p>Try resizing the browser window.</p>-->
+
+<canvas class="background"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+
+<div class="tx-hero">
+
+ <h1 style="margin-bottom: 1rem;">One assessment method<br><span>to rule them all</span></h1>
+
+ <p style="margin-bottom: 1.2rem; color: white;">The ITL performance system can help you create a science-backed-up methodology approach to measure and grade your business system performance.</p>
+
+ <a style="background-color: white; border-color: white; color: #105d2f;" href="quick/" title="Installation" class="md-button md-button--primary start"> Get started </a>
+
+ <a style="border-color: white; color: white"  href="https://github.com/matejavulic/improvement-tracking-language" title="Go to repository" class="md-button"> Go to GitHub </a> 
+
+</div>
                 
               
               

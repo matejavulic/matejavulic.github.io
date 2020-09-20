@@ -9,4 +9,39 @@ window.MathJax = {
     ignoreHtmlClass: ".*|",
     processHtmlClass: "arithmatex"
   }
+  
 };
+
+window.onload = function() {
+  Particles.init({
+	selector: '.background',
+	color: ['#f6ff75', '#404B69', '#DBEDF3'],
+	connectParticles: true,
+	sizeVariations: 5, 
+    // options for breakpoints
+	responsive: [
+    {
+      breakpoint: 768,
+      options: {
+        maxParticles: 50,
+        color: ['#FF4A3D', '#404B69', '#DBEDF3'], //#DA0463
+        connectParticles: true
+      }
+    }, 
+	{
+      breakpoint: 425,
+      options: {
+        maxParticles: 25,
+        connectParticles: true
+      }
+    }, 
+	{
+      breakpoint: 320,
+      options: {
+        maxParticles:0
+		// disables particles.js
+      }
+    }
+  ]
+});
+}
