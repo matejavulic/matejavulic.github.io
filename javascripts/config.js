@@ -17,7 +17,7 @@ window.onload = function() {
 	selector: '.background',
 	color: ['#f6ff75', '#404B69', '#DBEDF3'],
 	connectParticles: true,
-	sizeVariations: 5, 
+	sizeVariations: 4, 
     // options for breakpoints
 	responsive: [
     {
