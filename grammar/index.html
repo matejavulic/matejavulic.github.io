@@ -898,7 +898,7 @@ instruction: "report" STRING code_block -&gt; pocetak_izvestaja
            | "grade comparative" NAME "," NAME";" -&gt; oceni_metrike_u
            | "grade singular" NAME ("," NAME)* ";" -&gt; oceni_metrike_p
            | "print" NAME ("," NAME)* ";" -&gt; ispisi_metrike
-           | "make report" STRING ";" -&gt; pravi_izvestaj
+           | "make excel report" STRING ";" -&gt; pravi_izvestaj
            | "draw metric" NAME ("," NAME)* "from" set -&gt; nacrtaj_metriku
 
 code_block: "{" instruction+ "}" -&gt; blok_naredbi
