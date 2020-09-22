@@ -61,7 +61,7 @@
         <aside class="md-announce">
           <div class="md-announce__inner md-grid md-typeset">
             
-  <p>💡 New feature available! The ITL IDE now supports <a class="announ" href = "/ide-keyboard/">keyboard shortcuts!</a></p>
+  <p>💡 New feature available! The ITL IDE now supports <a class="announ" href = "/ide-excel/">Excel reporting!</a></p>
 
           </div>
         </aside>
@@ -237,7 +237,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../change/" class="md-tabs__link">
+        <a href="../release/" class="md-tabs__link">
           Changelog
         </a>
       
@@ -381,7 +381,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../change/" title="Changelog" class="md-nav__link">
+    <a href="../release/" title="Changelog" class="md-nav__link">
       Changelog
     </a>
   </li>
@@ -592,15 +592,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#discussion" class="md-nav__link">
     Discussion
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -877,6 +877,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../ide-excel/" title="Creating the Excel report" class="md-nav__link">
+      Creating the Excel report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../ide-as-res/" title="Understanding assessment results" class="md-nav__link">
       Understanding assessment results
     </a>
@@ -927,8 +939,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../change/" title="Version history" class="md-nav__link">
-      Version history
+    <a href="../release/" title="Release notes" class="md-nav__link">
+      Release notes
     </a>
   </li>
 
@@ -1066,15 +1078,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#discussion" class="md-nav__link">
     Discussion
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1095,21 +1107,17 @@
                 
                 
                 <h1 id="tutorial">Tutorial</h1>
-<h3 id="introduction">Introduction</h3>
-<div style="text-align: justify">
-This advanced tutorial will guide you through the basic ITL capabilites. For the sake of demonstration, we will assess the perfomance metrics of the three digital products used by three different banks operating under a single bank group. The bank names are going to be as follows: `E_bank_1`, `E_bank_2`, and `E_bank_3`. Of course, when we speak about digital products, it is implied that we speak of e-banking web applications.
-</div>
-
-<h3 id="what-are-we-going-to-measure-and-assess">What are we going to measure and assess?</h3>
+<h2 id="introduction">Introduction</h2>
+<p>This advanced tutorial will guide you through the basic ITL capabilites. For the sake of demonstration, we will assess the perfomance metrics of the three digital products used by three different banks operating under a single bank group. The bank names are going to be as follows: 
+<code>E_bank_1</code>, <code>E_bank_2</code>, and <code>E_bank_3</code>. Of course, when we speak about digital products, it is implied that we speak of e-banking web applications.</p>
+<h2 id="what-are-we-going-to-measure-and-assess">What are we going to measure and assess?</h2>
 <div style="text-align: justify">
 We will define five metrics that will be used within this evaluation system. The metric scores are calculated using the Python Skfuzzy Library.
-</div>
 
-<div style="text-align: justify">
 Metrics definitions (monitored on a monthly basis):
 </div>
 
-<h4 id="metric-1-number-of-complaints">Metric 1: Number of complaints</h4>
+<h3 id="metric-1-number-of-complaints">Metric 1: Number of complaints</h3>
 <p>Definition: <em>The number of users' complaints about the web application performance.</em></p>
 <p>Metric parameters:</p>
 <table>
@@ -1134,7 +1142,7 @@ Metrics definitions (monitored on a monthly basis):
 </tr>
 </tbody>
 </table>
-<h4 id="metric-2-loan-lead-time">Metric 2: Loan lead time</h4>
+<h3 id="metric-2-loan-lead-time">Metric 2: Loan lead time</h3>
 <p>Definition: <em>The average amount of time that passes between application submission and loan approval</em></p>
 <p>Metric parameters:</p>
 <table>
@@ -1159,7 +1167,7 @@ Metrics definitions (monitored on a monthly basis):
 </tr>
 </tbody>
 </table>
-<h4 id="metric-3-number-of-the-approved-loans">Metric 3: Number of the approved loans</h4>
+<h3 id="metric-3-number-of-the-approved-loans">Metric 3: Number of the approved loans</h3>
 <p>Definition: <em>The number of approved loans</em></p>
 <p>Metric parameters:</p>
 <table>
@@ -1184,7 +1192,7 @@ Metrics definitions (monitored on a monthly basis):
 </tr>
 </tbody>
 </table>
-<h4 id="metric-4-application-screen-time">Metric 4: Application screen time</h4>
+<h3 id="metric-4-application-screen-time">Metric 4: Application screen time</h3>
 <p>Definition: <em>The average period of time a user spends using the web application on a daily basis</em></p>
 <p>Metric parameters:</p>
 <table>
@@ -1209,7 +1217,7 @@ Metrics definitions (monitored on a monthly basis):
 </tr>
 </tbody>
 </table>
-<h4 id="metric-5-newly-issued-credit-cards">Metric 5: Newly issued credit cards</h4>
+<h3 id="metric-5-newly-issued-credit-cards">Metric 5: Newly issued credit cards</h3>
 <p>Definition: <em>The number of newly issued credit cards</em></p>
 <p>Metric parameters:</p>
 <table>
@@ -1234,7 +1242,7 @@ Metrics definitions (monitored on a monthly basis):
 </tr>
 </tbody>
 </table>
-<h3 id="assessment-code">Assessment code</h3>
+<h2 id="assessment-code">Assessment code</h2>
 <pre><code>report "June Performance Assessment Report - E-bank Group"
 {
 
@@ -1292,8 +1300,8 @@ Metrics definitions (monitored on a monthly basis):
     print E_bank_1, E_bank_2, E_bank_3;
 }
 </code></pre>
-<h3 id="what-are-we-going-to-get-from-the-assessment">What are we going to get from the assessment?</h3>
-<h4 id="numerical-result">Numerical result</h4>
+<h2 id="what-are-we-going-to-get-from-the-assessment">What are we going to get from the assessment?</h2>
+<h3 id="numerical-result">Numerical result</h3>
 <pre><code>Cumulative grade:
 
 Metric: {'E_bank_1': {'Compl': 40.0, 'New_Credit_Cards': 39.333, 'Screen_Time': 45.714, 'New_Loans': 58.511, 'Loan_Lead_Time': 70.467}, 'E_bank_2': {'Compl': 80.0, 'New_Credit_Cards': 65.0, 'Screen_Time': 27.857, 'New_Loans': 68.511, 'Loan_Lead_Time': 41.2}, 'E_bank_3': {'Compl': 20.0, 'New_Credit_Cards': 30.333, 'Screen_Time': 60.714, 'New_Loans': 47.66, 'Loan_Lead_Time': 83.2}}
@@ -1339,26 +1347,26 @@ Values: {'Compl': {0: 4.0, 1: 20.0, 2: 5.0}, 'New_Credit_Cards': {0: 191.0, 1: 1
 
 &gt; Code successufully executed.
 </code></pre>
-<h4 id="radar-chart">Radar chart</h4>
+<h3 id="radar-chart">Radar chart</h3>
 <p><center>
 <img alt="Radar Chart" src="../img/tut2/radarSingle.png" width="90%" />
 </center></p>
-<h4 id="comparative-radar-chart">Comparative radar chart</h4>
+<h3 id="comparative-radar-chart">Comparative radar chart</h3>
 <p><center>
 <img alt="Radar Comparative" src="../img/tut2/radarCombined.png" width="90%" />
 </center></p>
-<h4 id="fuzzy-metric-type-1">Fuzzy metric - Type 1</h4>
+<h3 id="fuzzy-metric-type-1">Fuzzy metric - Type 1</h3>
 <p><center>
 <img alt="Rise" src="../img/tut2/fuzzRise.png" width="90%" />
 </center></p>
-<h4 id="fuzzy-metric-type-2">Fuzzy metric - Type 2</h4>
+<h3 id="fuzzy-metric-type-2">Fuzzy metric - Type 2</h3>
 <p><center>
 <img alt="Fall" src="../img/tut2/fuzzFall.png" width="90%" />
 </center></p>
 <h3 id="discussion">Discussion</h3>
-<p><justify>
+<p><div style="text-align: justify"> 
 This documentation paragraph will be available soon. 
-</justify></p>
+</div></p>
                 
               
               
