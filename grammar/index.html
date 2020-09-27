@@ -61,7 +61,7 @@
         <aside class="md-announce">
           <div class="md-announce__inner md-grid md-typeset">
             
-  <p style="user-select: none;">💡 New feature available! The ITL IDE now supports <a class="announ" href = "/ide-excel/">Excel reporting!</a></p>
+  <p style="user-select: none;">💡 New feature available! The ITL DS now supports <a class="announ" href = "/ide-excel/">Excel reporting!</a></p>
 
           </div>
         </aside>
@@ -903,10 +903,10 @@
 <p>The following excerpt shows the grammar of ITL. For interpreting entered syntax by this definition, Lark parser was used.</p>
 <pre><code>start: instruction+
 
-instruction: "report" STRING code_block -&gt; pocetak_izvestaja
+instruction: "assessment" STRING code_block -&gt; pocetak_izvestaja
            | "metrics" NAME "{" dict_item* "}" -&gt; skup_metrika
            | "grade" NAME ";" -&gt; oceni_metrike
-           | "grade cumulative" NAME ("," NAME)* ";" -&gt; oceni_metrike_z
+           | "grade cumulative" NAME "," NAME ("," NAME)* ";" -&gt; oceni_metrike_z
            | "grade comparative" NAME "," NAME";" -&gt; oceni_metrike_u
            | "grade singular" NAME ("," NAME)* ";" -&gt; oceni_metrike_p
            | "print" NAME ("," NAME)* ";" -&gt; ispisi_metrike
@@ -915,7 +915,12 @@ instruction: "report" STRING code_block -&gt; pocetak_izvestaja
 
 code_block: "{" instruction+ "}" -&gt; blok_naredbi
 dict_item: NAME "=" dict_subitem -&gt; naziv_metrike
-dict_subitem: "(" NUMBER "," NUMBER "," NUMBER ")" -&gt; parametri_metrike
+dict_subitem: "(" NUMBER "," NUMBER "," NUMBER ")" -&gt; par_mer_lin     
+            | "trapezoid(" STRING? ","? NUMBER "," NUMBER "," NUMBER "," NUMBER "," NUMBER ")" -&gt; par_mer_tra
+            | "triangle(" STRING? ","? NUMBER "," NUMBER "," NUMBER "," NUMBER ")" -&gt; par_mer_tri
+            | "gauss(" STRING? ","? NUMBER "," NUMBER "," NUMBER ")" -&gt; par_mer_gau
+            | "gauss2(" STRING? ","? NUMBER "," NUMBER "," NUMBER "," NUMBER "," NUMBER ")" -&gt; par_mer_gau2
+            | "sigmoid(" STRING? ","? NUMBER "," NUMBER "," NUMBER ")" -&gt; par_mer_sig
 set: NAME ";" -&gt; from
 COMMENT : /#.*/
 

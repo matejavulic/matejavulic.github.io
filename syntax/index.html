@@ -61,7 +61,7 @@
         <aside class="md-announce">
           <div class="md-announce__inner md-grid md-typeset">
             
-  <p style="user-select: none;">💡 New feature available! The ITL IDE now supports <a class="announ" href = "/ide-excel/">Excel reporting!</a></p>
+  <p style="user-select: none;">💡 New feature available! The ITL DS now supports <a class="announ" href = "/ide-excel/">Excel reporting!</a></p>
 
           </div>
         </aside>
@@ -901,18 +901,34 @@
                 <h1 id="syntax">Syntax</h1>
 <h2 id="syntax_1">Syntax</h2>
 <p>The following excerpt shows the syntax of ITL and designed tree structure of assessment. Symbol + represents the possibility of using one or several instructions/variables.</p>
-<pre><code>report+ "Report Tile"
+<pre><code>assessment+ "Assessment Title"
 {
     metrics+ Metric_set_1
     {
-        Metric_1+ = (v1,b1,а1)
-        }
+        Metric_linear1+ = (v,a,b), if a&lt;b
+        Metric_linear2+ = (v,b,a), if b&gt;a
+
+        Metric_trapezoid1+ = trapezoid(v,a,b,c,d)
+        Metric_trapezoid2+ = trapezoid("-",v,a,b,c,d)
+
+        Metric_triangle1+ = triangle(v,a,b,c)
+        Metric_triangle2+ = trinagle("-",v,a,b,c)
+
+        Metric_gauss1+ = gauss(v,a,b)
+        Metric_gauss2+ = gauss("-",v,a,b)
+
+        Metric_gauss21+ = gauss2(v,a,b,c,d)
+        Metric_gauss22+ = gauss2("-",v,a,b,c,d)
+
+        Metric_sigmoid1+ = sigmoid(v,a,b)
+        Metric_sigmoid2+ = sigmoid("-",v,a,b)   
+    }
 
     #comment
     print Metric_set_1+;
 
     grade Metric_set_1;
-    draw metric Metric_1+ from Metric_set_1;
+    draw metric Metric_1+ from Metric_set_1;  # Metric_linear1&amp;2 currently supported
 
     grade comparative Metric_set_1, Metric_set_2;
 
@@ -920,7 +936,7 @@
 
     grade singular Metric_set_1+;
 
-    make excel report "Report Title";
+    make excel report "Excel Report Title";
 }
 </code></pre>
                 
