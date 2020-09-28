@@ -461,6 +461,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorial-multirepo/" title="Multiple reports creating" class="md-nav__link">
+      Multiple reports creating
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -703,8 +715,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-sav-pro/" title="Saving project" class="md-nav__link">
-      Saving project
+    <a href="../ide-sav-pro/" title="Saving a project" class="md-nav__link">
+      Saving a project
     </a>
   </li>
 
@@ -715,8 +727,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-run/" title="Running code" class="md-nav__link">
-      Running code
+    <a href="../ide-run/" title="Running the code" class="md-nav__link">
+      Running the code
     </a>
   </li>
 
@@ -739,8 +751,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-as-res/" title="Understanding assessment results" class="md-nav__link">
-      Understanding assessment results
+    <a href="../ide-as-res/" title="Understanding the assessment results" class="md-nav__link">
+      Understanding the assessment results
     </a>
   </li>
 
@@ -791,8 +803,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../release-itl/" title="ITL release notes" class="md-nav__link">
-      ITL release notes
+    <a href="../release-itl/" title="ITL Core release notes" class="md-nav__link">
+      ITL Core release notes
     </a>
   </li>
 
@@ -834,8 +846,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#110-_-september-27-2020" class="md-nav__link">
-    1.1.0 _ September 27, 2020
+  <a href="#111-_-september-25-2020" class="md-nav__link">
+    1.1.1 _ September 25, 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-_-september-24-2020" class="md-nav__link">
+    1.1.0 _ September 24, 2020
   </a>
   
 </li>
@@ -862,8 +881,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#012-_-february-21-2020" class="md-nav__link">
-    0.1.2 _ February 21, 2020
+  <a href="#012-_-february-25-2020" class="md-nav__link">
+    0.1.2 _ February 25, 2020
   </a>
   
 </li>
@@ -918,8 +937,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#110-_-september-27-2020" class="md-nav__link">
-    1.1.0 _ September 27, 2020
+  <a href="#111-_-september-25-2020" class="md-nav__link">
+    1.1.1 _ September 25, 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-_-september-24-2020" class="md-nav__link">
+    1.1.0 _ September 24, 2020
   </a>
   
 </li>
@@ -946,8 +972,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#012-_-february-21-2020" class="md-nav__link">
-    0.1.2 _ February 21, 2020
+  <a href="#012-_-february-25-2020" class="md-nav__link">
+    0.1.2 _ February 25, 2020
   </a>
   
 </li>
@@ -983,73 +1009,79 @@
                 
                 
                 <h1 id="release-notes-itl-development-studio">Release notes - ITL Development Studio</h1>
-<h2 id="110-_-september-27-2020">1.1.0 <small>_ September 27, 2020</small></h2>
+<h2 id="111-_-september-25-2020">1.1.1 <small>_ September 25, 2020</small></h2>
+<ul>
+<li>Dodat broj verzije ITL-a u About sekciji</li>
+<li>Promenenjen naziv IDE-a u ITL Development Studio</li>
+<li>Promenjena početna veličina prozora na 700x500 piksela</li>
+</ul>
+<h2 id="110-_-september-24-2020">1.1.0 <small>_ September 24, 2020</small></h2>
 <ul>
 <li>Dodat broj verzije ITL-a u About sekciji</li>
 <li>Promenenjen naziv IDE-a u ITL Development Studio</li>
 <li>Dodato automatsko ispisivanje trenutne verzije jezika ITL kao broj verzije Development Studija</li>
-<li>Znacajnije izmene u organizaciji glavne klase IDE-a, dodate dve nove klase za treding i oznacavanje sintakse teksa</li>
-<li>Implementirani tagovi sa regex-om za oznacavanje sintakse razlicitim bojama</li>
-<li>Implementirana klasa koja nasledjuje osnovnu klasu Text sa metodom za primenu tagova na trenutni kod u tekst editoru</li>
-<li>Implementacije klase za pokretanje neblokirajuceg paralelnog pricesa sa zadatko da na svaku 1ms proverava tekst i da prema regeks pravilima vizuelno oznacava sintaksu</li>
-<li>Promenjena pocetna velicina prozora na 700x500 piksela</li>
-<li>Znacajne izmene u vizuelnom izgledu aplikacije: <ul>
+<li>Značajnije izmene u organizaciji glavne klase IDE-a, dodate dve nove klase za treding i označavanje sintakse teksta</li>
+<li>Implementirani tagovi sa regex-om za označavanje sintakse predefinisanim bojama</li>
+<li>Implementirana klasa koja nasleđuje osnovnu klasu <code>Text</code> sa metodom za primenu tagova na trenutni kod u tekst editoru</li>
+<li>Implementacije klase za pokretanje neblokirajućeg paralelnog procesa sa zadatkom da na svaku 1ms proverava tekst i da prema regex pravilima vizuelno označava sintaksu</li>
+<li>Značajne izmene u vizuelnom izgledu aplikacije: <ul>
 <li>promenjene boje prozora</li>
-<li>fonta i velicine teksta</li>
-<li>linije za oznacavanje gresaka,</li>
-<li>boja selektovanog teksta sa i bez aktivnog fokusa</li>
-<li>boja kursora i ikonica kursora kada se nalazi iznad klizaca</li>
-<li>dodata nova paleta boja za oznacvanje sintakse</li>
+<li>promenjen font i veličina teksta</li>
+<li>promenjena boja linije za označavanje sintaktičkih grešaka,</li>
+<li>promenjena boja selektovanog teksta sa i bez aktivnog fokusa</li>
+<li>promenjena boja kursora i ikonica kursora kada se nalazi iznad klizača</li>
+<li>dodata nova paleta boja za označvanje sintakse</li>
 <li>promenjena boja menija</li>
 </ul>
 </li>
 </ul>
 <h2 id="101-_-june-7-2020">1.0.1 <small>_ June 7, 2020</small></h2>
 <ul>
-<li>Promenjene paker prozora, umesto pack koristi se grid</li>
-<li>Refaktorisanje koda zaduzenog za pakovanje vidzeta aplikacije.</li>
+<li>Promenjen paker prozora, umesto pack-a koristi se grid</li>
+<li>Refaktorisanje koda zaduženog za pakovanje vidžeta aplikacije.</li>
 <li>Dodata funkcija i meni dugme za otvaranje online dokumentacije</li>
-<li>Dodat pomocni meni koji se otvara pritiskom na desni klik</li>
+<li>Dodat pomoćni meni koji se otvara pritiskom na desni klik</li>
 <li>Dodati akceleratori za svaku stavku menija</li>
 <li>Dodat automatski fokus u polju tekst editora</li>
-<li>Ispravljena greska formiranja treceg polja grid sitema koje se ne koristi </li>
+<li>Ispravljena greška formiranja trećeg polja grid sitema koje se ne koristi </li>
 <li>Manje vizuelne izmene u meniju aplikacije</li>
+<li>Dodata dugmad - prečice za korak napred-nazad u traci menija aplikacije</li>
 </ul>
 <h2 id="100-_-april-3-2020">1.0.0 <small>_ April 3, 2020</small></h2>
 <ul>
 <li>Implementiran integrisani terminal</li>
 <li>Implementirano novo automatsko definisanje koda kada korisnik otvori nov prazan fajl</li>
-<li>Dodate tasterske precice za sve osnovne komande</li>
+<li>Dodate tasterske prečice za sve osnovne komande</li>
 <li>Dodata ikonica ITL-a u uglu prozora</li>
-<li>Dodato automatsko menjanje naziva ucitanog fajla u traci prozora</li>
+<li>Dodato automatsko menjanje naziva učitanog fajla u traci prozora</li>
 <li>Dodata opcija brisanja svog unetog teksta</li>
-<li>Dodata tasterska precica za brisanje svog unetog teksta</li>
-<li>Dodata opcija za izlazak iz programa sa tasterskom precicom</li>
-<li>Ispravljena greska neresponzivnog ponasanja vidzeta na promenu velicine prozora</li>
-<li>Ispravljena greska terminiranja aplikacije kada korisnik pokrene kod a kod nije unesen</li>
-<li>Manje izmene u prikazu fonta, njegovoj veicini</li>
-<li>Izmenjen pocetni kod u aplikaciji (pomoc korisniku prilikom pokretanja aplikacije)</li>
-<li>Poboljsan meni za otvaranje fajlova (dodata podrska za .itl format)</li>
-<li>Poboljsan meni za cuvanje fajlova (dodata podrska za .itl format)</li>
-<li>Obradjena greska lexc.UnexpectedEOF sa odgovarajucom razumljivom porukom za korisnika</li>
-<li>Refaktorisan kod za hvatanje generalne greske</li>
-<li>Definisana nova pocetna velicina prozora na 600x400 piksela</li>
+<li>Dodata tasterska prečica za brisanje svog unetog teksta</li>
+<li>Dodata opcija za izlazak iz programa sa tasterskom prečicom</li>
+<li>Ispravljena greška neresponzivnog ponašanja vidžeta na promenu veličine prozora</li>
+<li>Ispravljena greška terminiranja aplikacije kada korisnik pokrene kod a kod nije unesen</li>
+<li>Manje izmene u prikazu fonta, njegovoj veičini</li>
+<li>Izmenjen početni kod u aplikaciji (pomoć korisniku prilikom pokretanja aplikacije)</li>
+<li>Poboljšan meni za otvaranje fajlova (dodata podrška za .itl format)</li>
+<li>Poboljšan meni za čuvanje fajlova (dodata podrška za .itl format)</li>
+<li>Obrađena greška lexc.UnexpectedEOF sa odgovarajućom razumljivom porukom za korisnika</li>
+<li>Refaktorisan kod za hvatanje generalne greške</li>
+<li>Definisana nova početna veličina prozora na 600x400 piksela</li>
 </ul>
 <h2 id="013-_-march-13-2020">0.1.3 <small>_ March 13, 2020</small></h2>
 <ul>
-<li>Implemetriano inicijalno pracenje gresaka</li>
-<li>Implemetirano oznacavanje crvenom linijom mesta sa greskom</li>
+<li>Implemetriano inicijalno praćenje grešaka</li>
+<li>Implemetirano označavanje crvenom linijom sintaktičke greške</li>
 <li>Implementirana opcija prikrivanja trace-a (DEBUG opcija)</li>
-<li>Implementirano automatsko ispisivanje pocetnog koda</li>
-<li>Manje izmene u nacinu ispisa informacija u terminalu</li>
+<li>Implementirano automatsko ispisivanje početnog koda</li>
+<li>Manje izmene u načinu ispisa informacija u terminalu</li>
 </ul>
-<h2 id="012-_-february-21-2020">0.1.2 <small>_ February 21, 2020</small></h2>
+<h2 id="012-_-february-25-2020">0.1.2 <small>_ February 25, 2020</small></h2>
 <ul>
 <li>Implementiran mini debager </li>
-<li>Dodate simbolicke precice za izvrsavanje koda</li>
-<li>Dodate precice za napred/nazad</li>
-<li>Dodato obavestenje o verziji IDE-a i ITL-a</li>
-<li>Dodati klizaci za terminal i tekst editor</li>
+<li>Dodate simboličke precice za izvršavanje koda</li>
+<li>Dodate prečice za napred/nazad</li>
+<li>Dodato obaveštenje o verziji IDE-a i ITL-a</li>
+<li>Dodati klizači za terminal i tekst editor</li>
 <li>Dodat nov zaštitni znak </li>
 </ul>
 <h2 id="011-_-february-11-2020">0.1.1 <small>_ February 11, 2020</small></h2>
@@ -1080,7 +1112,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../release-itl/" title="ITL release notes" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../release-itl/" title="ITL Core release notes" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1089,7 +1121,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                ITL release notes
+                ITL Core release notes
               </div>
             </div>
           </a>

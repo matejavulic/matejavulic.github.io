@@ -461,6 +461,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorial-multirepo/" title="Multiple reports creating" class="md-nav__link">
+      Multiple reports creating
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -576,9 +588,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syntax_1" class="md-nav__link">
-    Syntax
+  <a href="#assessment-structure" class="md-nav__link">
+    Assessment structure
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax-reference" class="md-nav__link">
+    Syntax reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntax reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assessment-string" class="md-nav__link">
+    assessment STRING
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-name" class="md-nav__link">
+    metrics NAME
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#var_metric_set" class="md-nav__link">
+    @var_metric_set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notice" class="md-nav__link">
+    Notice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -743,8 +796,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-sav-pro/" title="Saving project" class="md-nav__link">
-      Saving project
+    <a href="../ide-sav-pro/" title="Saving a project" class="md-nav__link">
+      Saving a project
     </a>
   </li>
 
@@ -755,8 +808,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-run/" title="Running code" class="md-nav__link">
-      Running code
+    <a href="../ide-run/" title="Running the code" class="md-nav__link">
+      Running the code
     </a>
   </li>
 
@@ -779,8 +832,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-as-res/" title="Understanding assessment results" class="md-nav__link">
-      Understanding assessment results
+    <a href="../ide-as-res/" title="Understanding the assessment results" class="md-nav__link">
+      Understanding the assessment results
     </a>
   </li>
 
@@ -829,8 +882,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../release-itl/" title="ITL release notes" class="md-nav__link">
-      ITL release notes
+    <a href="../release-itl/" title="ITL Core release notes" class="md-nav__link">
+      ITL Core release notes
     </a>
   </li>
 
@@ -876,9 +929,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syntax_1" class="md-nav__link">
-    Syntax
+  <a href="#assessment-structure" class="md-nav__link">
+    Assessment structure
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax-reference" class="md-nav__link">
+    Syntax reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntax reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assessment-string" class="md-nav__link">
+    assessment STRING
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-name" class="md-nav__link">
+    metrics NAME
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#var_metric_set" class="md-nav__link">
+    @var_metric_set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notice" class="md-nav__link">
+    Notice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -899,8 +993,8 @@
                 
                 
                 <h1 id="syntax">Syntax</h1>
-<h2 id="syntax_1">Syntax</h2>
-<p>The following excerpt shows the syntax of ITL and designed tree structure of assessment. Symbol + represents the possibility of using one or several instructions/variables.</p>
+<h2 id="assessment-structure">Assessment structure</h2>
+<p>The following excerpt shows the syntax of the ITL and designed tree structure of assessment. Symbol + represents the possibility of using one or several instructions/variables.</p>
 <pre><code>assessment+ "Assessment Title"
 {
     metrics+ Metric_set_1
@@ -924,11 +1018,13 @@
         Metric_sigmoid2+ = sigmoid("-",v,a,b)   
     }
 
-    #comment
+    # comment
     print Metric_set_1+;
 
     grade Metric_set_1;
-    draw metric Metric_1+ from Metric_set_1;  # Metric_linear1&amp;2 currently supported
+
+    # Metric_linear1&amp;2 currently supported
+    draw metric Metric_1+ from Metric_set_1;
 
     grade comparative Metric_set_1, Metric_set_2;
 
@@ -939,6 +1035,201 @@
     make excel report "Excel Report Title";
 }
 </code></pre>
+<h2 id="syntax-reference">Syntax reference</h2>
+<h3 id="assessment-string">assessment STRING</h3>
+<p>The assessment object creating instruction.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong>:</td>
+<td>Instruction</td>
+</tr>
+<tr>
+<td><strong>Identifier</strong>:</td>
+<td>@assess_obj</td>
+</tr>
+<tr>
+<td><strong>1st parent:</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>1st child:</strong></td>
+<td>@metrics_set</td>
+</tr>
+<tr>
+<td><strong>Parameters:</strong></td>
+<td>STRING : string</td>
+</tr>
+<tr>
+<td></td>
+<td>Defines the assesment report title.</td>
+</tr>
+<tr>
+<td><strong>Returns:</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Limitations:</strong></td>
+<td>None <img width=300/></td>
+</tr>
+</tbody>
+</table>
+<details class="note"><summary>assessment STRING example</summary><p>Code:</p>
+<pre><code>assessment "Example Report Title"
+{    
+    metrics Example_Metric_Set
+    {
+     }
+}
+</code></pre>
+<p>Result:</p>
+<pre><code>&gt; Code successufully executed.
+</code></pre>
+</details>
+<h3 id="metrics-name">metrics NAME</h3>
+<p>The metrics set object creating instruction.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong>:</td>
+<td>Instruction</td>
+</tr>
+<tr>
+<td><strong>Identifier</strong>:</td>
+<td>@metrics_set</td>
+</tr>
+<tr>
+<td><strong>1st parent:</strong></td>
+<td>@assess_obj</td>
+</tr>
+<tr>
+<td><strong>1st child:</strong></td>
+<td>@metric</td>
+</tr>
+<tr>
+<td><strong>Parameters:</strong></td>
+<td>NAME : @var_metric_set</td>
+</tr>
+<tr>
+<td></td>
+<td>Metric set variable.</td>
+</tr>
+<tr>
+<td><strong>Returns:</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Limitations:</strong></td>
+<td>None <img width=300/></td>
+</tr>
+</tbody>
+</table>
+<details class="note"><summary>metrics NAME example</summary><p>Code:</p>
+<pre><code>assessment "Example Report Title"
+{    
+    metrics Example_Metric_Set
+    {
+     }
+}
+</code></pre>
+<p>Result:</p>
+<pre><code>&gt; Code successufully executed.
+</code></pre>
+</details>
+<h3 id="var_metric_set">@var_metric_set</h3>
+<p>The @metrics_set variable containing the @metric_var instances.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong>:</td>
+<td>Variable</td>
+</tr>
+<tr>
+<td><strong>Identifier</strong>:</td>
+<td>@var_metric_set</td>
+</tr>
+<tr>
+<td><strong>1st parent:</strong></td>
+<td>@metrics_set</td>
+</tr>
+<tr>
+<td><strong>1st child:</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Parameters:</strong></td>
+<td _var_metric_set="@var_metric_set"></td>
+</tr>
+<tr>
+<td></td>
+<td>Any letter or digit combination excluding keywords and whitespace. Cannot start with the digit either.</td>
+</tr>
+<tr>
+<td><strong>Returns:</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Limitations:</strong></td>
+<td>None <img width=300/></td>
+</tr>
+</tbody>
+</table>
+<details class="note"><summary>@var_metric_set example</summary><p>Proper varible names: <code>metrName</code>, <code>ebank1</code>, <code>Metr_1_ebank1</code></p>
+<p>Improper variable names: <code>1MetricName</code>,<code>Metric name</code>,<code>metric</code></p>
+<p>Code:</p>
+<pre><code>assessment "Example Report Title"
+{    
+ metrics Example_Metric_Set
+  {
+    example_metr_1 = (1,1,1)
+    }
+ print Example_Metric_Set;
+
+ metrics Example_Metric_Set
+  {
+    example_metr_1 = (3,2,13)
+    }
+ print Example_Metric_Set;
+}
+</code></pre>
+<p>Result:</p>
+<pre><code>    &gt; Metric sets values:
+    _____________________
+
+    Metric: Example_Metric_Set
+    Values: {'example_metr_1': {'type': 'linear', 'data': {0: Token(NUMBER, '1'), 1: Token(NUMBER, '1'), 2: Token(NUMBER, '1')}}}
+
+    &gt; Metric sets values:
+    _____________________
+
+    Metric: Example_Metric_Set
+    Values: {'example_metr_1': {'type': 'linear', 'data': {0: Token(NUMBER, '3'), 1: Token(NUMBER, '2'), 2: Token(NUMBER, '13')}}}
+
+    &gt; Code successufully executed.
+</code></pre>
+</details>
+<h3 id="notice">Notice</h3>
+<p><div style="text-align: justify">
+The development of the documentation section is in progress. 
+</div></p>
                 
               
               

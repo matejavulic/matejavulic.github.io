@@ -461,6 +461,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorial-multirepo/" title="Multiple reports creating" class="md-nav__link">
+      Multiple reports creating
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -705,8 +717,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-sav-pro/" title="Saving project" class="md-nav__link">
-      Saving project
+    <a href="../ide-sav-pro/" title="Saving a project" class="md-nav__link">
+      Saving a project
     </a>
   </li>
 
@@ -717,8 +729,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-run/" title="Running code" class="md-nav__link">
-      Running code
+    <a href="../ide-run/" title="Running the code" class="md-nav__link">
+      Running the code
     </a>
   </li>
 
@@ -789,15 +801,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#list-of-the-comaprative-grades" class="md-nav__link">
-    List of the comaprative grades
+  <a href="#list-containing-the-comaprative-grades" class="md-nav__link">
+    List containing the comaprative grades
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#list-of-the-cumultive-grades" class="md-nav__link">
-    List of the cumultive grades
+  <a href="#list-containing-the-cumultive-grade" class="md-nav__link">
+    List containing the cumultive grade
   </a>
   
 </li>
@@ -827,8 +839,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ide-as-res/" title="Understanding assessment results" class="md-nav__link">
-      Understanding assessment results
+    <a href="../ide-as-res/" title="Understanding the assessment results" class="md-nav__link">
+      Understanding the assessment results
     </a>
   </li>
 
@@ -877,8 +889,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../release-itl/" title="ITL release notes" class="md-nav__link">
-      ITL release notes
+    <a href="../release-itl/" title="ITL Core release notes" class="md-nav__link">
+      ITL Core release notes
     </a>
   </li>
 
@@ -953,15 +965,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#list-of-the-comaprative-grades" class="md-nav__link">
-    List of the comaprative grades
+  <a href="#list-containing-the-comaprative-grades" class="md-nav__link">
+    List containing the comaprative grades
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#list-of-the-cumultive-grades" class="md-nav__link">
-    List of the cumultive grades
+  <a href="#list-containing-the-cumultive-grade" class="md-nav__link">
+    List containing the cumultive grade
   </a>
   
 </li>
@@ -996,41 +1008,41 @@
                 
                 <h1 id="creating-the-excel-report">Creating the Excel report</h1>
 <h2 id="example-code-for-report-generating">Example code for report generating</h2>
-<pre><code>report "June Performance Assessment Report - E-bank Group"
+<pre><code>assessment "June Performance Assessment Report - E-bank Group"
 {    
     metrics E_bank_1
-    {
-        Compl = (3,20,5)
-        New_Credit_Cards = (218, 100, 400)
-        Screen_Time = (7.4, 1, 15)
-        New_Loans = (305,30,500)
+    {   
+        Compl = gauss2(2.4,6,3,8,3)
+        New_Credit_Cards = (218,100,400)
+        Screen_Time = trapezoid("-",4,1,5,10,16)
+        New_Loans = sigmoid("-",2.3,6.2,8.4)
         Loan_Lead_Time = (4.43,30,15) 
     } 
     metrics E_bank_2
     {
-        Compl = (1,20,5)
-        New_Credit_Cards = (295, 100, 400)
-        Screen_Time = (4.9, 1, 15)
-        New_Loans = (352,30,500)
+        Compl = gauss2(3.5,6,3,8,3)
+        New_Credit_Cards = (295,100,400)
+        Screen_Time = triangle(4.9,1,5,15)
+        New_Loans = sigmoid("-",7.3,6.2,8.4)
         Loan_Lead_Time = (8.82,30,15)
     } 
     metrics E_bank_3
     {
-        Compl = (4,20,5)
-        New_Credit_Cards = (191, 100, 400)
-        Screen_Time = (9.5, 1, 15)
-        New_Loans = (254,30,500)
+        Compl = gauss(1.2,6,3)
+        New_Credit_Cards = (191,100,400)
+        Screen_Time = triangle(9.5,1,5,15)
+        New_Loans = sigmoid("-",7.3,6.2,8.4)
         Loan_Lead_Time = (2.52,30,15) 
     }
-grade cumulative E_bank_1,E_bank_2,E_bank_3;
+  grade cumulative E_bank_1, E_bank_2, E_bank_3;
 
-grade singular E_bank_1, E_bank_2, E_bank_3;
+  grade singular E_bank_1, E_bank_2, E_bank_3;
 
-grade comparative E_bank_1, E_bank_2;
+  grade comparative E_bank_1, E_bank_2;
 
-print E_bank_1, E_bank_2, E_bank_3;
+  print E_bank_1, E_bank_2, E_bank_3;
 
-make excel report "E_Bank_Report";
+  make excel report "Excel_Tutorial";
 }
 </code></pre>
 <h2 id="structure-of-the-generated-excel-report">Structure of the generated Excel report</h2>
@@ -1041,9 +1053,13 @@ make excel report "E_Bank_Report";
 <th>#</th>
 <th>Set</th>
 <th>Name</th>
-<th>Param 1</th>
-<th>Param 2</th>
-<th>Param 3</th>
+<th>Type</th>
+<th>Sign</th>
+<th>Param v</th>
+<th>Param a</th>
+<th>Param b</th>
+<th>Param c</th>
+<th>Param d</th>
 </tr>
 </thead>
 <tbody>
@@ -1051,121 +1067,109 @@ make excel report "E_Bank_Report";
 <td>0</td>
 <td>E_bank_1</td>
 <td>Compl</td>
+<td>Gaussian type 2</td>
+<td>+</td>
+<td>2.4</td>
+<td>6</td>
 <td>3</td>
-<td>20</td>
-<td>5</td>
+<td>8</td>
+<td>3</td>
 </tr>
 <tr>
 <td>1</td>
 <td>E_bank_1</td>
 <td>New_Credit_Cards</td>
+<td>Linear</td>
+<td>+</td>
 <td>218</td>
 <td>100</td>
 <td>400</td>
+<td>/</td>
+<td>/</td>
 </tr>
 <tr>
 <td>2</td>
 <td>E_bank_1</td>
 <td>Screen_Time</td>
-<td>7.4</td>
+<td>Trapezoidal</td>
+<td>-</td>
+<td>4</td>
 <td>1</td>
-<td>15</td>
+<td>5</td>
+<td>10</td>
+<td>16</td>
 </tr>
 <tr>
 <td>3</td>
 <td>E_bank_1</td>
 <td>New_Loans</td>
-<td>305</td>
-<td>30</td>
-<td>500</td>
+<td>Sigmoidal</td>
+<td>-</td>
+<td>2.3</td>
+<td>6.2</td>
+<td>8.4</td>
+<td>/</td>
+<td>/</td>
 </tr>
 <tr>
 <td>4</td>
 <td>E_bank_1</td>
 <td>Loan_Lead_Time</td>
+<td>Linear</td>
+<td>+</td>
 <td>4.43</td>
 <td>30</td>
 <td>15</td>
+<td>/</td>
+<td>/</td>
 </tr>
 <tr>
-<td>5</td>
-<td>E_bank_2</td>
-<td>Compl</td>
-<td>1</td>
-<td>20</td>
-<td>5</td>
-</tr>
-<tr>
-<td>6</td>
-<td>E_bank_2</td>
-<td>New_Credit_Cards</td>
-<td>295</td>
-<td>100</td>
-<td>400</td>
-</tr>
-<tr>
-<td>7</td>
-<td>E_bank_2</td>
-<td>Screen_Time</td>
-<td>4.9</td>
-<td>1</td>
-<td>15</td>
-</tr>
-<tr>
-<td>8</td>
-<td>E_bank_2</td>
-<td>New_Loans</td>
-<td>352</td>
-<td>30</td>
-<td>500</td>
-</tr>
-<tr>
-<td>9</td>
-<td>E_bank_2</td>
-<td>Loan_Lead_Time</td>
-<td>8.82</td>
-<td>30</td>
-<td>15</td>
-</tr>
-<tr>
-<td>10</td>
-<td>E_bank_3</td>
-<td>Compl</td>
-<td>4</td>
-<td>20</td>
-<td>5</td>
-</tr>
-<tr>
-<td>11</td>
-<td>E_bank_3</td>
-<td>New_Credit_Cards</td>
-<td>191</td>
-<td>100</td>
-<td>400</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 <tr>
 <td>12</td>
 <td>E_bank_3</td>
 <td>Screen_Time</td>
+<td>Triangular</td>
+<td>+</td>
 <td>9.5</td>
 <td>1</td>
+<td>5</td>
 <td>15</td>
+<td>/</td>
 </tr>
 <tr>
 <td>13</td>
 <td>E_bank_3</td>
 <td>New_Loans</td>
-<td>254</td>
-<td>30</td>
-<td>500</td>
+<td>Sigmoidal</td>
+<td>-</td>
+<td>7.3</td>
+<td>6.2</td>
+<td>8.4</td>
+<td>/</td>
+<td>/</td>
 </tr>
 <tr>
 <td>14</td>
 <td>E_bank_3</td>
 <td>Loan_Lead_Time</td>
+<td>Linear</td>
+<td>+</td>
 <td>2.52</td>
 <td>30</td>
 <td>15</td>
+<td>/</td>
+<td>/</td>
 </tr>
 </tbody>
 </table>
@@ -1176,33 +1180,63 @@ make excel report "E_Bank_Report";
 <th>#</th>
 <th>Metric</th>
 <th>Grade</th>
+<th>Max grade</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
 <td>E_bank_1</td>
-<td>51/100 points</td>
+<td>70</td>
+<td>100</td>
 </tr>
 <tr>
 <td>1</td>
 <td>E_bank_2</td>
-<td>57/100 points</td>
+<td>41</td>
+<td>100</td>
 </tr>
 <tr>
 <td>2</td>
 <td>E_bank_3</td>
-<td>48/100 points</td>
+<td>83</td>
+<td>100</td>
 </tr>
 </tbody>
 </table>
-<h3 id="list-of-the-comaprative-grades">List of the comaprative grades</h3>
+<h3 id="list-containing-the-comaprative-grades">List containing the comaprative grades</h3>
 <table>
 <thead>
 <tr>
 <th>#</th>
-<th>Metric set name</th>
-<th>Comparative grade</th>
+<th>Metric</th>
+<th>Grade</th>
+<th>Max grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>E_bank_1</td>
+<td>57</td>
+<td>100</td>
+</tr>
+<tr>
+<td>1</td>
+<td>E_bank_2</td>
+<td>55</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-containing-the-cumultive-grade">List containing the cumultive grade</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Grade</th>
+<th>Max grade</th>
 </tr>
 </thead>
 <tbody>
@@ -1210,53 +1244,30 @@ make excel report "E_Bank_Report";
 <td>0</td>
 <td>E_bank_1</td>
 <td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>E_bank_2</td>
-<td></td>
-</tr>
-<tr>
-<td>2</td>
-<td></td>
-<td>54/100 points</td>
-</tr>
-</tbody>
-</table>
-<h3 id="list-of-the-cumultive-grades">List of the cumultive grades</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Metric set name</th>
-<th>Cumulative grade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>E_bank_1</td>
 <td></td>
 </tr>
 <tr>
 <td>1</td>
 <td>E_bank_2</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>2</td>
 <td>E_bank_3</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>3</td>
 <td></td>
-<td>52/100 points</td>
+<td>50</td>
+<td>100</td>
 </tr>
 </tbody>
 </table>
 <h2 id="example-excel-report">Example Excel report</h2>
-<p>You can download the example Excel report from this tutorial <a href="/gendocuments/E_Bank_Report.xlsx">here.</a></p>
+<p>You can download the example Excel report from this tutorial <a href="/gendocuments/Excel_Tutorial.xlsx">here.</a></p>
                 
               
               
@@ -1275,7 +1286,7 @@ make excel report "E_Bank_Report";
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../ide-run/" title="Running code" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ide-run/" title="Running the code" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1284,19 +1295,19 @@ make excel report "E_Bank_Report";
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Running code
+                Running the code
               </div>
             </div>
           </a>
         
         
-          <a href="../ide-as-res/" title="Understanding assessment results" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ide-as-res/" title="Understanding the assessment results" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Understanding assessment results
+                Understanding the assessment results
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
