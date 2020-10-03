@@ -1,8 +1,31 @@
 :root {
   --md-primary-fg-color: #004444;
   --md-footer-bg-color:  #000000;
+  --md-default-fg-color--light: #004444;
 }
 
 .announ {
-	color: peachpuff !important;
+	color: #ffd679 !important;
+}
+
+.h3-color {
+	color: #004444;
+}
+
+summary {
+	background-color: #004444 !important;
+	color: white;
+}
+
+.example>summary::before {
+    background-color: white !important;
+}
+
+details.example {
+    border-color: #004444 !important;
+}
+
+.md-typeset code {
+    /*background-color: #2b2b2b;
+    color: #a9b7c6;*/
 }

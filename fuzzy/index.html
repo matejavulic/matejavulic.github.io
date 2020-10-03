@@ -650,8 +650,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-fuzzy-membership-function" class="md-nav__link">
-    What is fuzzy membership function?
+  <a href="#how-do-we-define-them" class="md-nav__link">
+    How do we define them?
   </a>
   
 </li>
@@ -661,19 +661,60 @@
     Supported functions
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-type-1-fuzzy-membership-function-rising-slope" class="md-nav__link">
-    The Type 1 fuzzy membership function — Rising Slope
+    <nav class="md-nav" aria-label="Supported functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rising-slope-type-1" class="md-nav__link">
+    Rising slope — type 1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#the-type-2-fuzzy-membership-function-falling-slope" class="md-nav__link">
-    The Type 2 fuzzy membership function — Falling Slope
+        
+          <li class="md-nav__item">
+  <a href="#falling-slope-type-2" class="md-nav__link">
+    Falling slope — type 2
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapezoidal" class="md-nav__link">
+    Trapezoidal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triangular" class="md-nav__link">
+    Triangular
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaussian" class="md-nav__link">
+    Gaussian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaussian-2-combined" class="md-nav__link">
+    Gaussian 2 (combined)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sigmoidal" class="md-nav__link">
+    Sigmoidal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -909,8 +950,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-fuzzy-membership-function" class="md-nav__link">
-    What is fuzzy membership function?
+  <a href="#how-do-we-define-them" class="md-nav__link">
+    How do we define them?
   </a>
   
 </li>
@@ -920,19 +961,60 @@
     Supported functions
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-type-1-fuzzy-membership-function-rising-slope" class="md-nav__link">
-    The Type 1 fuzzy membership function — Rising Slope
+    <nav class="md-nav" aria-label="Supported functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rising-slope-type-1" class="md-nav__link">
+    Rising slope — type 1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#the-type-2-fuzzy-membership-function-falling-slope" class="md-nav__link">
-    The Type 2 fuzzy membership function — Falling Slope
+        
+          <li class="md-nav__item">
+  <a href="#falling-slope-type-2" class="md-nav__link">
+    Falling slope — type 2
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapezoidal" class="md-nav__link">
+    Trapezoidal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triangular" class="md-nav__link">
+    Triangular
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaussian" class="md-nav__link">
+    Gaussian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaussian-2-combined" class="md-nav__link">
+    Gaussian 2 (combined)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sigmoidal" class="md-nav__link">
+    Sigmoidal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -953,15 +1035,15 @@
                 
                 
                 <h1 id="fuzzy-membership-functions">Fuzzy membership functions</h1>
-<h2 id="what-is-fuzzy-membership-function">What is fuzzy membership function?</h2>
+<h2 id="how-do-we-define-them">How do we define them?</h2>
 <p><div style="text-align: justify">
-The fuzzy membership function computes the element's degree of the membership to a given fuzzy set. This measurement is numerically presented as the value between 0 and 1. 
+The fuzzy membership functions compute the element's degree of the membership to a given fuzzy set. This measurement is numerically presented as the value between 0 and 1. 
 </div></p>
 <h2 id="supported-functions">Supported functions</h2>
 <p><div style="text-align: justify">
-At the moment, ITL supports two types of fuzzy membership functions (special case of triangular fuzzy function). But the user doesn't need to worry about which function to use. IDL automatically recognises the type of the fuzzy function based on provided parameters.
+At the moment, the ITL supports six different types of the fuzzy membership functions. The linear membership function is often used  and IDL has an ability to automatically recognize the type of the linear fuzzy function based on provided parameters. Five other supported functions include Trapezoidal, Triangular, Gauss, Gauss2 and Sigmoidal fuzzy membership functions.
 </div></p>
-<h2 id="the-type-1-fuzzy-membership-function-rising-slope">The Type 1 fuzzy membership function — Rising Slope</h2>
+<h3 id="rising-slope-type-1">Rising slope — type 1</h3>
 <p><div style="text-align: justify">
 This fuzzy membership function can be defined as:
 </div></p>
@@ -973,9 +1055,14 @@ This fuzzy membership function can be defined as:
  1,&amp; \text{ if } v_i \geq b_i 
 \end{cases}\)</span><br />
 </center></p>
-<p>where 𝑎<sub>𝑖</sub>, 𝑏<sub>𝑖</sub>, 𝑣<sub>𝑖</sub>, are the best, worst and measured value of 𝑖−th metric respectively and
-𝜇<sub>𝐹𝑖</sub> (𝑣<sub>𝑖</sub>) representing 𝑖−th metric’s grade between 0 and 1.</p>
-<p>The following graph represents an example of Type 1 fuzzy function: 
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,</li>
+<li><span class="arithmatex">\(a_i\)</span> - is the lower limit of the worst metric value,</li>
+<li><span class="arithmatex">\(b_i\)</span> - is the starting point of best metric value,</li>
+<li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li>
+</ul>
+<p>The following graph represents an example of the rising slope fuzzy function: 
 <center>
 <img alt="Rising" src="../img/theory/fuzzRiseTheory.png" width="90%" />
 </center></p>
@@ -983,7 +1070,7 @@ This fuzzy membership function can be defined as:
 Note how the function starts rising after value of 100 (so the parameter a here equals 100) and has an linear increasing value up to 400. After this point the grade (y-axis) has the constant value of 1.0 (so the parameter b here equals to 400).
 </div>
 
-<h2 id="the-type-2-fuzzy-membership-function-falling-slope">The Type 2 fuzzy membership function — Falling Slope</h2>
+<h3 id="falling-slope-type-2">Falling slope — type 2</h3>
 <p><div style="text-align: justify">
 This fuzzy membership function can be defined as:
 </div></p>
@@ -995,14 +1082,171 @@ This fuzzy membership function can be defined as:
  0,&amp; \text{ if } v_i \geq b_i 
 \end{cases}\)</span> 
 </center></p>
-<p>where 𝑎<sub>𝑖</sub>, 𝑏<sub>𝑖</sub>, 𝑣<sub>𝑖</sub>, are the best, worst and measured value of 𝑖−th metric respectively and
-𝜇<sub>𝐹𝑖</sub> (𝑣<sub>𝑖</sub> ) representing 𝑖−th metric’s grade between 0 and 1.</p>
-<p>The following graph represents an example of Type 2 fuzzy function: 
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,</li>
+<li><span class="arithmatex">\(a_i\)</span> - is the upper limit of the best metric value,</li>
+<li><span class="arithmatex">\(b_i\)</span> - is the starting point of the worst metric value,</li>
+<li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li>
+</ul>
+<p>The following graph represents an example of the falling slope fuzzy function: 
 <center>
 <img alt="Falling" src="../img/theory/fuzzFallTheory.png" width="90%" />
 </center></p>
 <div style="text-align: justify">
 Note how the function immediately starts falling until value of 5 (so the parameter a here equals 0) After this point the grade (y-axis) has the constant value of 0.0 (so the parameter b here equals to 5).
+</div>
+
+<h3 id="trapezoidal">Trapezoidal</h3>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Positive</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)=
+\begin{cases}
+0,&amp; \text{ if } v_i \leq a_i \\ 
+\frac{v_i-a_i}{b_i-a_i},&amp; \text{ if } v_i \in [a_i,b_i) \\ 
+1,&amp; \text{ if } v_i \in [b_i,c_i] \\
+\frac{v_i-d_i}{c_i-d_i},&amp; \text{ if } v_i \in (c_i,d_i] \\ 
+0,&amp; \text{ if } v_i &gt; d_i \\ 
+\end{cases}\)</span><br />
+</center></p>
+<p><ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(a_i\)</span> - is the left upper limit of the worst metric value,</li><li><span class="arithmatex">\(b_i\)</span> - is the starting point of the best metric value,</li><li><span class="arithmatex">\(c_i\)</span> - is the ending point of the best metric value,</li><li><span class="arithmatex">\(d_i\)</span> - is the right lower limit of the worst metric value,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>-th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Negative</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)=
+\begin{cases}
+1,&amp; \text{ if } v_i \leq a_i \\ 
+\frac{v_i-b_i}{a_i-b_i},&amp; \text{ if } v_i \in (a_i,b_i] \\ 
+0,&amp; \text{ if } v_i \in (b_i,c_i) \\
+\frac{v_i-c_i}{d_i-c_i},&amp; \text{ if } v_i \in [c_i,d_i) \\ 
+1,&amp; \text{ if } v_i \ge d_i \\ 
+\end{cases}\)</span>
+</center></p>
+<p><ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(a_i\)</span> - is the left upper limit of the best metric value,</li><li><span class="arithmatex">\(b_i\)</span> - is the starting point of the worst metric value,</li><li><span class="arithmatex">\(c_i\)</span> - is the ending point of the worst metric value,</li><li><span class="arithmatex">\(d_i\)</span> - is the right lower limit of the best metric value,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>-th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+</div>
+<h3 id="triangular">Triangular</h3>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Positive</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)=
+\begin{cases}
+0,&amp; \text{ if } v_i &lt; a_i \\ 
+\frac{v_i-a_i}{b_i-a_i},&amp; \text{ if } v_i \in [a_i,b_i) \\ 
+1,&amp; \text { if } v_i = b_i \\ 
+\frac{c_i-v_i}{c_i-b_i},&amp; \text{ if } v_i \in (b_i,c_i] \\
+0,&amp; \text{ if } v_i &gt; c_i \\ 
+\end{cases}\)</span><br />
+</center></p>
+<p>where:
+<ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(a_i\)</span> - is the left upper limit of the worst metric value,</li><li><span class="arithmatex">\(b_i\)</span> - is the best metric value point,</li><li><span class="arithmatex">\(c_i\)</span> - is the lower limit of the worst metric value,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Negative</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)=
+\begin{cases}
+1,&amp; \text{ if } v_i \leq a_i \\ 
+\frac{b_i-v_i}{b_i-a_i},&amp; \text{ if } v_i \in (a_i,b_i) \\
+0,&amp; \text { if } v_i = b_i \\ 
+\frac{v_i-b_i}{c_i-b_i},&amp; \text{ if } v_i \in (b_i,c_i) \\ 
+1,&amp; \text{ if } v_i \geq c_i \\ 
+\end{cases}\)</span>
+</center></p>
+<p>where:
+<ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(a_i\)</span> - is the left upper limit of the best metric value,</li><li><span class="arithmatex">\(b_i\)</span> - is the worst metric value point,</li><li><span class="arithmatex">\(c_i\)</span> - is the right lower limit of the best metric value</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+</div>
+<h3 id="gaussian">Gaussian</h3>
+<p><small> <img alt="🧪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9ea.svg" title=":test_tube:" /> Experimental </small></p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Positive</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)= \begin{cases}
+{e^{-(\frac{v_i-\mu_i}{\sigma_i})}}^2, &amp;\text { if } v_i \in [\mu_i-6\cdot \sigma_i)\\
+1, &amp;\text { if } v_i = \mu_i\\
+{e^{-(\frac{v_i-\mu_i}{\sigma_i})}}^2, &amp;\text { if } v_i \in [\mu_i+6\cdot \sigma_i)\\
+\end{cases}\)</span><br />
+</center></p>
+<p>where:</p>
+<p><ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(\mu_i\)</span> - is the best value metric point ,</li><li><span class="arithmatex">\(\sigma_i\)</span> - is the standard deviation,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Negative</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)= \begin{cases}
+{1-e^{-(\frac{v_i-\mu_i}{\sigma_i})}}^2, &amp;\text { if } v_i \in [\mu_i-6\cdot \sigma_i)\\
+0, &amp;\text { if } v_i = \mu_i\\
+{1-e^{-(\frac{v_i-\mu_i}{\sigma_i})}}^2, &amp;\text { if } v_i \in [\mu_i+6\cdot \sigma_i)\\
+\end{cases}\)</span><br />
+</center></p>
+<p>where:</p>
+<p><ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(\mu_i\)</span> - is the worst value metric point,</li><li><span class="arithmatex">\(\sigma_i\)</span> - is the standard deviation,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+</div>
+<h3 id="gaussian-2-combined">Gaussian 2 (combined)</h3>
+<p><small> <img alt="🧪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9ea.svg" title=":test_tube:" /> Experimental </small></p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Positive</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)= \begin{cases}
+{e^{-(\frac{v_i-\mu_{1_i}}{\sigma_{1_i}})}}^2, &amp;\text { if } v_i \in [\mu_{1_i}-6\cdot \sigma_{1_i})\\
+1, &amp;\text { if } v_i \in [\mu_{1_i}, \mu_{2_i}]\\
+{e^{-(\frac{v_i-\mu_{2_i}}{\sigma_{2_i}})}}^2, &amp;\text { if } v_i \in [\mu_{2_i}+6\cdot \sigma_{2_i})\\
+\end{cases}\)</span><br />
+</center></p>
+<p>where:
+<ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(\mu_{1_i}\)</span> - is the best metric starting point,</li><li><span class="arithmatex">\(\mu_{2_i}\)</span> - is the best metric ending point,</li><li><span class="arithmatex">\(\sigma_{1_i}\)</span> - is the first distribution standard deviation,</li><li><span class="arithmatex">\(\sigma_{2_i}\)</span> - is the second distribution standard deviation,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Negative</label><div class="tabbed-content">
+<p><div style="text-align: justify">
+This fuzzy membership function can be defined as:
+</div></p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i)= \begin{cases}
+{1-e^{-(\frac{v_i-\mu_i}{\sigma_i})}}^2, &amp;\text { if } v_i \in [\mu_i-6\cdot \sigma_i)\\
+0, &amp;\text { if } v_i = \mu_i\\
+{1-e^{-(\frac{v_i-\mu_i}{\sigma_i})}}^2, &amp;\text { if } v_i \in [\mu_i+6\cdot \sigma_i)\\
+\end{cases}\)</span><br />
+</center></p>
+<p>where:
+<ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,<li><span class="arithmatex">\(\mu_{1_i}\)</span> - is the left upper limit of the best metric,</li><li><span class="arithmatex">\(\mu_{2_i}\)</span> - is the right limit of thr best metric,</li><li><span class="arithmatex">\(\sigma_{1_i}\)</span> - is the first distribution standard deviation,</li><li><span class="arithmatex">\(\sigma_{2_i}\)</span> - is the second distribution standard deviation,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+</div>
+<h3 id="sigmoidal">Sigmoidal</h3>
+<p><small> <img alt="🧪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9ea.svg" title=":test_tube:" /> Experimental </small></p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Positive</label><div class="tabbed-content">
+<p>This fuzzy membership function can be defined as:</p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i) = \frac{1}{1+e^{-b_i \cdot (v_i-a_i)}}\)</span><br />
+</center></p>
+<p>where:</p>
+<p><ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,</li><li><span class="arithmatex">\(a_i\)</span> - is the center value of sigmoid where it equals 0.5,</li><li><span class="arithmatex">\(b_i\)</span> - is the width of sigmoidal region about <span class="arithmatex">\(a_i\)</span>,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Negative</label><div class="tabbed-content">
+<p>This fuzzy membership function can be defined as:</p>
+<p><center>
+<span class="arithmatex">\(\mu_{F_i}(v_i) = 1-\frac{1}{1+e^{-b_i \cdot (v_i-a_i)}}\)</span><br />
+</center></p>
+<p>where:</p>
+<p><ul><li><span class="arithmatex">\(v_i\)</span> - is the measured value to be assessed,</li><li><span class="arithmatex">\(a_i\)</span> - is the center value of sigmoid where it equals 0.5,</li><li><span class="arithmatex">\(b_i\)</span> - is the width of sigmoidal region about <span class="arithmatex">\(a_i\)</span>,</li><li><span class="arithmatex">\(\mu_{F_i}(v_i)\)</span> - is the <span class="arithmatex">\(i\)</span>−th metric’s grade between 0 and 1.</li></ul></p>
+</div>
 </div>
                 
               
