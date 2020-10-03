@@ -13,6 +13,7 @@ window.MathJax = {
 };
 
 window.onload = function() {
+  if ( window.location.pathname == '/' ){
   Particles.init({
 	selector: '.background',
 	color: ['#f6ff75', '#404B69', '#DBEDF3'],
@@ -44,4 +45,5 @@ window.onload = function() {
     }
   ]
 });
+}
 }
