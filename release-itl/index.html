@@ -834,6 +834,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#111-_-october-10-2020" class="md-nav__link">
+    1.1.1 _ October 10, 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#110-_-september-27-2020" class="md-nav__link">
     1.1.0 _ September 27, 2020
   </a>
@@ -944,6 +951,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#111-_-october-10-2020" class="md-nav__link">
+    1.1.1 _ October 10, 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#110-_-september-27-2020" class="md-nav__link">
     1.1.0 _ September 27, 2020
   </a>
@@ -1023,6 +1037,14 @@
                 
                 
                 <h1 id="release-notes-itl-core">Release notes - ITL Core</h1>
+<h2 id="111-_-october-10-2020">1.1.1 <small>_ October 10, 2020</small></h2>
+<ul>
+<li>Ispravljena greška prilikom parsovanja podataka i njihovog smeštanja u objekat metrika. Sada se podatak metrike prvo pretvara u odgovarajući tip (string ili float) i tek onda smešta u objekat metrika. </li>
+<li>Izmenjena metod <code>gradeSing</code>:<ul>
+<li>nova opcija ispisa rang liste skupova metrika obuhvaćenih ocenjivanjem</li>
+</ul>
+</li>
+</ul>
 <h2 id="110-_-september-27-2020">1.1.0 <small>_ September 27, 2020</small></h2>
 <ul>
 <li>Ispravljena greška u gramatici sintakse za naredbu <code>grade cumulative</code> (broj parametara mora da bude tačno dva)</li>
@@ -1060,10 +1082,7 @@
 <li>nova opcija ispisa bolje ocene za date metrike (izraženo u procentima i poenima)</li>
 </ul>
 </li>
-<li>metod <code>gradeSing</code> za naredbu <code>grade singular</code><ul>
-<li>nova opcija ispisa rang liste skupova metrika obuhvaćenih ocenjivanjem</li>
-</ul>
-</li>
+<li>metod <code>gradeSing</code> za naredbu <code>grade singular</code></li>
 </ul>
 </li>
 <li>Zbog promene strukture objekta internog modela objekta metrika izmenjen i refaktorisan deo koda zadužen za unos izračunatih metrika u Excel datoteku</li>
@@ -1086,37 +1105,35 @@
 </ul>
 <h2 id="100-_-august-7-2020">1.0.0 <small>_  August 7, 2020</small></h2>
 <ul>
-<li>Izrađeno korisničkog uputstvo sa dokumentacijom</li>
+<li>Izrađeno korisničko uputstvo sa dokumentacijom</li>
 <li>Preuređena interna struktura ITL IDE-a</li>
 </ul>
 <h2 id="014-_-june-2-2020">0.1.4 <small>_ June 2, 2020</small></h2>
 <ul>
-<li>Implemetriani graficki izveštaji</li>
+<li>Implementrian grafički prikaz izveštaja</li>
 </ul>
 <h2 id="013-_-march-19-2020">0.1.3 <small>_ March 19, 2020</small></h2>
 <ul>
-<li>Implemetriana pojedinačna ocena unetog skupa metrika<ul>
-<li>definiana nova sintaktička naredba <code>grade</code></li>
+<li>Implementriana pojedinačna ocena unetog skupa metrika<ul>
+<li>definisana nova sintaktička naredba <code>grade</code></li>
 </ul>
 </li>
 <li>Implementiran grafički prikaz željene karakteristike metrike<ul>
 <li>definisana nova sintaktička naredba <code>draw metric &lt;metric_name&gt;? from &lt;matric_set&gt;</code></li>
 </ul>
 </li>
-<li>Implemetriana zbirna ocena unetog skupa metrika<ul>
-<li>definiana nova sintaktička naredba <code>grade comparative</code></li>
+<li>Implementriana zbirna ocena unetog skupa metrika<ul>
+<li>definisana nova sintaktička naredba <code>grade comparative</code></li>
 </ul>
 </li>
-<li>Implemetriana kumulativna ocena za željene skupove metrika<ul>
-<li>definiana nova sintaktička naredba <code>grade cumulative</code></li>
+<li>Implementriana kumulativna ocena za željene skupove metrika<ul>
+<li>definisana nova sintaktička naredba <code>grade cumulative</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="012-_-february-21-2020">0.1.2 <small>_ February 21, 2020</small></h2>
 <ul>
-<li>
-<p>Implementiran grafički prikaz radarskog grafika</p>
-<ul>
+<li>Implementiran grafički prikaz radarskog grafika<ul>
 <li>automatski prikaz vrednosti za trenutnu metriku sa vizuelnim označavanjem<ul>
 <li>prvi nivo vizuelnog označavanja - zeleno (od 70 bodova do 100 bodova)</li>
 <li>drugi nivo vizuelnog označavanja - narandžasto (od 40 bodova do 70 bodova)</li>
@@ -1125,18 +1142,16 @@
 </li>
 </ul>
 </li>
-<li>
-<p>Implemetrian fazi tip 2 grafik</p>
-</li>
-<li>Implemetriana fazi tip 2 funkcija</li>
+<li>Implementrian fazi tip 2 grafik</li>
+<li>Implementriana fazi tip 2 funkcija</li>
 </ul>
 <h2 id="011-_-february-11-2020">0.1.1 <small>_ February 11, 2020</small></h2>
 <ul>
-<li>Imlementiran fazi 1 grafik</li>
-<li>Implementirana fazi 1 funkcija</li>
+<li>Implementiran fazi tip 1 grafik</li>
+<li>Implementirana fazi tip 1 funkcija</li>
 <li>Poboljšana sintaksa ITL-a<ul>
 <li>refaktorisana gramatika</li>
-<li>implementirano ocenjivanje vise izvestaja</li>
+<li>implementirano ocenjivanje više izveštaja</li>
 </ul>
 </li>
 </ul>
